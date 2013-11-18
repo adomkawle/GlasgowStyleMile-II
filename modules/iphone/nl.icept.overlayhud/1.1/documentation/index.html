@@ -1,0 +1,116 @@
+<h1>overlayhud Module 1.1</h1>
+<h2>Description</h2>
+<p>OverlayHUD is a generic component to build HUD's. You can use this for example to show notifications of completed tasks, a blocking notification of a busy task or a login box. The userinput to underlaying views is blocked to prevent bypassing of the HUD. But in a tabView you are still free to switch to a different tab.</p>
+<p>2 kinds of HUDs are included. A generic empty hud and a loading hud with a label, activity indicator and the posibility to show a image or image sequence. The loading HUD is similar to MBProgressHUD wich is a native component with a similar functionality.</p>
+<p>Every hud is customizable with the posibility to add additional subviews and elements.</p>
+<h2>Accessing the overlayhud Module</h2>
+<p>To access this module from JavaScript, you would do the following:</p>
+<pre><code>var overlayhudModule = require("nl.icept.overlayhud");
+</code></pre>
+<p>The overlayhudModule variable is a reference to the Module object.</p>
+<p>Don't forget to list the module in tiapp.xml!</p>
+<h2>Reference</h2>
+<h3>createEmptyHUD(options)</h3>
+<p>Create a empty HUD. Options is a optional object with the following properties and default values:</p>
+<p>{
+    zIndex: 999,</p>
+<pre><code>backgroundColor: "#000",
+borderRadius: 10,
+opacity: 0.8,
+
+height: 'auto',
+width: 'auto',
+top: null,
+bottom: null,
+left: null,
+right: null
+</code></pre>
+<p>}</p>
+<h3>createEmptyHUDOnWindow(window, options)</h3>
+<p>Create a empty HUD on the specified window. Use this when you use the Single Context Model.</p>
+<h3>createLoadingHUD(options)</h3>
+<p>Create a loading HUD. Options is a optional object with the following properties and default values:</p>
+<p>{
+    zIndex: 999,</p>
+<pre><code>backgroundColor: "#000",
+borderRadius: 10,
+opacity: 0.8,
+
+color: '#fff',
+fontSize: 20,
+fontWeight: 'bold',
+
+message: "Loading...",
+
+activityIndicator: {
+    style: Titanium.UI.iPhone.ActivityIndicatorStyle.BIG,
+    hidden: false,
+    top: null,
+    bottom: null,
+    left: null,
+    right: null
+},
+
+image: {
+    image: null,
+    images: null,
+    opacity: 1.0,
+    repeatCount: 1,
+    hidden: false,
+    height: 'auto',
+    width: 'auto',
+    top: null,
+    bottom: null,
+    left: null,
+    right: null
+},
+
+label: {
+    hidden: false,
+    height: 'auto',
+    width: 'auto',
+    top: null,
+    bottom: 20,
+    left: null,
+    right: null
+},
+
+overlay: {
+    height: 150,
+    width: 150,
+    top: null,
+    bottom: null,
+    left: null,
+    right: null
+}
+</code></pre>
+<p>}</p>
+<h3>createLoadingHUDOnWindow(window, options)</h3>
+<p>Create a loading HUD on the specified window. Use this when you use the Single Context Model.</p>
+<h3><HUD>.show()</h3>
+<p>Show the HUD. Its attached to the current window.</p>
+<h3><HUD>.hide()</h3>
+<p>Hide the HUD.</p>
+<h3><HUD>.add(element)</h3>
+<p>Add a new element or subview to the HUD.</p>
+<h3><HUD>.remove(element)</h3>
+<p>Remove a element or subview from the HUD.</p>
+<h2>Usage</h2>
+<p>var loadingOverlay = overlayhudModule.createLoadingHUD({});
+loadingOverlay.show();</p>
+<p>setTimeout(function () {
+    loadingOverlay.hide({});
+}, 3000);</p>
+<p>For a complete overview of the options, a example project is included.</p>
+<h2>Author</h2>
+<p>Martijn Bogaard <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#109;&#97;&#114;&#116;&#105;&#106;&#110;&#64;&#105;&#99;&#101;&#112;&#116;&#46;&#110;&#108;">&#109;&#97;&#114;&#116;&#105;&#106;&#110;&#64;&#105;&#99;&#101;&#112;&#116;&#46;&#110;&#108;</a></p>
+<h2>License</h2>
+<p>After purchase in the Appcelerator Marketplace you get a unlimited, non-transferable 1 seat license. You are 
+free to use this in a unlimited amount of projects but you are not allowed to (re)sell your license.</p>
+<p>THIS SOFTWARE IS PROVIDED BY iCept ''AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT 
+LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DIRECT, 
+INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, 
+PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) 
+HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING 
+NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE 
+POSSIBILITY OF SUCH DAMAGE.</p>

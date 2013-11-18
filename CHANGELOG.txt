@@ -1,0 +1,34 @@
+Needs fixed:
+ - Over scroll BG image
+
+What's fixed in this version:
+ - Add result count to categories
+ - Categories should be ordered by name
+ - What's on section needs toggle A/Z Near Me
+ - What's hot toggle A-Z / Near Me
+ - General : Portrait only!
+ - Stores : Offers in list
+ - Whats' on detail, add to calendar not working
+ - What's on detail, add nearby bars and restaurants
+ - What's on section should auto rotate carousel
+ - What's hot should be ordered by distance ASC
+ - What's on detail, map should be zoomed in more (different pin)
+ - What's on should show distance
+ - What's on detail / Stores, map needs to click through to Google Maps App
+ - Travel : Items without website / telephone should link through to Google Maps App
+ - Travel : there is a space above the map
+ - Categories : Show Lifestyle / Shopping
+ - Travel : rail Toggle Locations / Operators
+ - Travel : parking toggle Locations / Operators
+ - Travel : subway should have a button to view map
+ - Travel : rail should have a button to view map
+ - Travel : Mobility needs a map button
+ - Travel : Map should show pins with number as in table
+
+Unfixable: 
+// - What's on should have map view
+// - What's hot should have map option (probably change to travel view)
+// - Next / Prev on What's On / Stores
+
+
+
