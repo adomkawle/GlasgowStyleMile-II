@@ -114,7 +114,7 @@
 		titleBar.add(switchView);
 		
 
-		var datePickerView = he.create('View', {backgroundColor: '#fff', width: Ti.UI.FILL, height:220, zIndex: 100, top: 0});
+		var datePickerView = he.create('View', {backgroundColor: '#fff', width: Ti.UI.FILL, height:(Ti.Platform.osname == "android" ) ? "60dp" : '220', zIndex: 100, top: 0});
 		
 		var addToCalander = he.create('contactButton', {text: 'Choose Date', type: 'noicon', top: 10, noarrow: true,textleft: 85});
 		w.add(addToCalander);					
@@ -236,7 +236,7 @@
 		
 		var FLAG = Ti.App.Properties.getBool("OPEN");
 		
-		if(FLAG){
+		if(FLAG || ACT_DATE == 'all'){
 				
 			while (events.isValidRow()) {
 
